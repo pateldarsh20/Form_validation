@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Contact Form</h1>
+    <form action="" id="form">
+        <label for="name">name : </label>
+        <input type="text" id="nm"> <br><br> 
+        <label for="email">email : </label>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="" id="txt"><br><br>
+        <label for="password">password</label>
+        <input type="password" id="psw"><br><br>
+        <label for="mobile number">number</label>
+       &nbsp&nbsp&nbsp <input type="number" name="" id="mbn"><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        document.getElementById("form").addEventListener('submit', 
+        function(){
+           const obj={
+            email:document.getElementById('txt').value, 
+            pss:document.getElementById('psw').value,
+            mbn:document.getElementById('mbn').value,
+           }
+
+           for(key in obj)
+           {
+             document.writeln(obj[key]+"<br>")
+           }
+        })
+    </script>
+</body>
+
+</html>
